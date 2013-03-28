@@ -3,7 +3,7 @@
 /**
  * Description of ListeArticle
  *
- * @author tony
+ * @author tony Villanova
  */
 include_once "bdd.php";
 require 'Article.php';

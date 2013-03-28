@@ -3,10 +3,12 @@
 /**
  * Description of Utilisateur
  *
- * @author tony
+ * @author tony Villanova
  */
 
 include_once 'bdd.php';
+
+
 class Utilisateur {
    private $pseudo;
    private $mdp;
@@ -33,13 +35,14 @@ class Utilisateur {
        
        $bdd->query($req)or die ("erreur");
      
+       
+       //a faire: ajouter le fait qu'on ne peux pas entrer deux meme pseudo bdd
     
     }
     
     function afficher_util()
     {
-        echo $this->pseudo." votre inscription a été prise en compte vous pouvez maintenant
-            avoir accès aux informations";
+        echo "Pseudo ".$this->pseudo."<br/>Vos droit ".$this->droitUtil;
     }
     
     

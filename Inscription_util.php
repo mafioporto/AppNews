@@ -21,20 +21,23 @@
          
         if(isset($_REQUEST['pseudo'])&&isset($_REQUEST['mdp'])) // vérifie les valeurs de pseudo et mdp
         {
-            $mdp= $_REQUEST['mdp'];
-            $pseudo= $_REQUEST['pseudo'];
-            $a= new Utilisateur($pseudo, $mdp, 0);
-            echo '<br/>';
-            $a->afficher_util();
+           if($_REQUEST['pseudo']==""|| $_REQUEST['mdp']=="" || !is_string($_REQUEST['pseudo']) )
+           {
+            ?><script>alert ("Entrer un nom utilisateur valide et un mot de passe !");</script><?php
+           }
+                 else {
+                        $mdp= $_REQUEST['mdp'];
+                        $pseudo= $_REQUEST['pseudo'];
+                        $a= new Utilisateur($pseudo, $mdp, 0);
+                         echo '<br/>';
+                        $a->afficher_util();
+                        ?><script>alert ("Enregistrement effectué !");</script><?php
+                        }
             
         }
         
         
         
-
-       
-     
-       
        
          ?>
             
