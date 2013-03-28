@@ -14,7 +14,7 @@ class Article {
     private $Auteur;
     private $Date;
     private $texte;
-    private $cpt;
+    
     
     private $verif;
             
@@ -52,10 +52,7 @@ class Article {
     {
         
         $bd= connexionBDD("root", "mysql");
-      
-      
-      
-        
+     
         $req_verif="select Titre from Article; ";
         $a=$bd->query($req_verif);
         while ($donne = $a->fetch())

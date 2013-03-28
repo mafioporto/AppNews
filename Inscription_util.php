@@ -16,17 +16,28 @@
         <div><br/>
         <?php
         
+        include 'Utilisateur.php';
+        include_once 'bdd.php';
+         
         if(isset($_REQUEST['pseudo'])&&isset($_REQUEST['mdp'])) // vérifie les valeurs de pseudo et mdp
         {
+            $mdp= $_REQUEST['mdp'];
+            $pseudo= $_REQUEST['pseudo'];
+            $a= new Utilisateur($pseudo, $mdp, 0);
+            echo '<br/>';
+            $a->afficher_util();
             
         }
-      
+        
+        
+        
+
        
-              
      
        
        
          ?>
+            
             
              <a href="index.php">Accueil</a>
         </div>
