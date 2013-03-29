@@ -26,18 +26,14 @@
             ?><script>alert ("Entrer un nom utilisateur valide et un mot de passe !");</script><?php
            }
                  else {
-                        $mdp= $_REQUEST['mdp'];
-                        $pseudo= $_REQUEST['pseudo'];
-                        $a= new Utilisateur($pseudo, $mdp, 0);
+
+                        $a= new Utilisateur($_REQUEST['pseudo'], $_REQUEST['mdp'], 0);
                          echo '<br/>';
                         $a->afficher_util();
-                        ?><script>alert ("Enregistrement effectué !");</script><?php
-                        }
-            
+                        }     
         }
-        
-        
-        
+        $a->afficher_membres();
+            
        
          ?>
             

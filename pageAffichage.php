@@ -7,9 +7,7 @@
     <body>
         <h1>Informations Entreprises</h1>
         
-        <form method="Post" action="index.php">
-            <label>Utilisateur <input type="text" name="pseudo"/></label>
-        </form>
+        
         <div><br/>
         <?php
       
@@ -19,15 +17,13 @@
        include_once 'Article.php';
        include_once 'bdd.php';
      
-       $tabarticle = new ListeArticle();
        
-       $article_2= new Article("Les aventures ", "TOoto","18/02/1993","ceci est un deuxième texte");
-       
-       
-         $article_2->ajouterArticleBDD($article_2);
            
+       if(isset($_REQUEST['pseudo'])&& isset($_REQUEST['mdp']))
+       {
+           
+       }
        
-       $tabarticle->afficheTabArticle();
        
          ?>
             
