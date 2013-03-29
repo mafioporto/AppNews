@@ -13,18 +13,28 @@
       
        
      
-       include_once  'ListeArticle.php';
-       include_once 'Article.php';
-       include_once 'bdd.php';
-     
-       
-           
+      include_once 'Utilisateur.php';
+       include_once'bdd.php';
+       include_once 'ListeArticle.php';
+           $bdd= connexionBDD("root", "mysql");
        if(isset($_REQUEST['pseudo'])&& isset($_REQUEST['mdp']))
        {
            
+           $a= new Utilisateur(); //constructeur test
+          $bool= $a->verif_util_mdp_bdd($_REQUEST['pseudo'], $_REQUEST['mdp']);
+                   
+          
+                     if($bool==1)// si l'utilisateur correspond à un utilisateur de la bdd
+                   {
+                         echo 'affichage des articles ';
+                   }
+                 else
+                   {
+                       echo "Erreur d'identification retourner à l'accueil pour vous connecter ! ";
+                   }
+                        
+       
        }
-       
-       
          ?>
             
             

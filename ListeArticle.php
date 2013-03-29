@@ -23,7 +23,7 @@ class ListeArticle {
             
         
         $bdd= connexionBDD("root", "mysql");
-        $req= "select * from Article;";
+        $req= "SELECT *FROM `Article` LIMIT 0 , 5;";
         $tri=$bdd->query($req);
        
         

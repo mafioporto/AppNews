@@ -19,18 +19,16 @@ class Utilisateur {
 
 
    /**
-   * Contruit un utilisateur
-   * @param type $pseudo
-   * @param type $mdp
-   * @param type $droitUtil 1 si peux modifier, 0 si droit de lecture seul
-   */
+    * 
+    * Construit un utilisateur par défaut
+    */
   
-   function __construct($pseudo,$mdp,$droitUtil) 
+   function __construct() 
    {
        
-        $this->pseudo=$pseudo;
-        $this->mdp=$mdp;
-        $this->droitUtil=$droitUtil; 
+        $this->pseudo="";
+        $this->mdp="";
+        $this->droitUtil=0; 
        
    }
     
@@ -41,8 +39,12 @@ class Utilisateur {
      * @param Utilisateur $Util
      */
     
-    function ajout_Util_bdd(Utilisateur $Util)
+    function ajout_Util_bdd($pseudo,$mdp,$droitUtil)
     {
+        $this->pseudo=$pseudo;
+        $this->mdp=$mdp;
+        $this->droitUtil=$droitUtil;
+        
        $bdd= connexionBDD("root", "mysql");
        // requête d'insertion
        $req= "insert into utilisateur(Pseudo,Mdp,Droit_util) values ('$this->pseudo','$this->mdp','$this->droitUtil');";
@@ -59,7 +61,7 @@ class Utilisateur {
             $cpt=0;
                 foreach ($this->liste_Util as $utilisateur)// on parcour le tableau
                     {
-                             if($utilisateur==$Util->pseudo)
+                             if($utilisateur==$this->pseudo)
                                  {
                                  $cpt++;
                                          

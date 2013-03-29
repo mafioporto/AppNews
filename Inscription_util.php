@@ -17,7 +17,7 @@
         <?php
         
         include 'Utilisateur.php';
-        include_once 'bdd.php';
+       
          
         if(isset($_REQUEST['pseudo'])&&isset($_REQUEST['mdp'])) // vérifie les valeurs de pseudo et mdp
         {
@@ -26,13 +26,18 @@
             ?><script>alert ("Entrer un nom utilisateur valide et un mot de passe !");</script><?php
            }
                  else {
-
-                        $a= new Utilisateur($_REQUEST['pseudo'], $_REQUEST['mdp'], 0);
-                         echo '<br/>';
-                        $a->afficher_util();
+                      
+                        $a= new Utilisateur();
+                        $a->ajout_Util_bdd($_REQUEST['pseudo'], $_REQUEST['mdp'],0);
+                        echo '<br/>';
+                        echo 'Voici les membres du site: ';
+                      
+                       echo '<br/>'.'<br/>';
+                  
+                       
                         }     
         }
-        $a->afficher_membres();
+        
             
        
          ?>
