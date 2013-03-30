@@ -32,14 +32,33 @@ class Utilisateur {
        
    }
     
+   /**
+    * retourne le droit de l'utilisateur
+    * @return int
+    */
    
-   
-    /**
+   public function getdroit()
+      {
+       
+         return $this->droitUtil;
+      }
+      
+      
+      public function getPseudo()
+      {
+          return $this->pseudo;
+      }
+
+      
+
+
+
+      /**
      * Ajoute l'utilisateur à la base de donnée
      * @param Utilisateur $Util
      */
     
-    function ajout_Util_bdd($pseudo,$mdp,$droitUtil)
+    public function ajout_Util_bdd($pseudo,$mdp,$droitUtil)
     {
         $this->pseudo=$pseudo;
         $this->mdp=$mdp;
@@ -86,7 +105,7 @@ class Utilisateur {
      * affiche un utilisateur 
      * 
      */
-    function afficher_util()
+    public  function afficher_util()
     {
         echo "Pseudo ".$this->pseudo."<br/>Vos droit ".$this->droitUtil;
     }
@@ -96,7 +115,7 @@ class Utilisateur {
      * 
      * affiche tous les membres inscrit
      */
-    function afficher_membres()
+    public function afficher_membres()
     {
         foreach ($this->liste_Util as $un_util)
         {
@@ -113,7 +132,7 @@ class Utilisateur {
      * @return int 1 si le mot pseudo et le mot de passe sont dans la base de donnée sinon 0
      */
     
-    function verif_util_mdp_bdd($pseudo,$mdp)
+    public function verif_util_mdp_bdd($pseudo,$mdp)
     {
         $bdo= connexionBDD("root", "mysql");
         $req= "select Pseudo,Mdp from utilisateur where Pseudo='$pseudo' AND Mdp='$mdp';";
@@ -128,8 +147,13 @@ class Utilisateur {
                     return 0;
                 }
       }
+      
+      
+     
        
     }
 }
+    
+
 
 ?>

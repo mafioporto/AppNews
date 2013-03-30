@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,14 +19,7 @@
         
         <a href="Inscription_util.php">Pas encore inscrit ?</a>
         <div><br/>
-        <?php
-      
-       
-              
-     
-       
-       
-         ?>
+        
         </div>
     </body>
 </html>

@@ -45,7 +45,6 @@ class Article {
     
     /**
      * fonction qui ajoute un article à la base de donnée 
-     * et qui vérifie si le titre de l'article n'est pas déja présent
      * @param Article $A
      */
     function ajouterArticleBDD(Article $A)
@@ -63,10 +62,13 @@ class Article {
         
         if ($this->verif != $A->titre)// verifie si le titre rentré en argument n'est pas déjà présent 
         {
-             $req=("insert into Article (Titre,date_article,texte_art)values('$A->titre','$A->Date','$A->texte');");
-        $bd->query($req)or die("impossible constructeur article");
-       
+            
+        $req=("insert into Article (Titre,date_article,texte_art,Pseudo)values('$A->titre','$A->Date','$A->texte','$A->Auteur');");
+        $bd->query($req);
+                
         }
+              
+        
     }
     
 }
