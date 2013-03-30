@@ -34,8 +34,11 @@ $_SESSION['mdp']=$_REQUEST['mdp'];
           
                      if($bool==1)// si l'utilisateur correspond à un utilisateur de la bdd
                    {
-                         $liste= new ListeArticle();
+                         $liste=new ListeArticle();
+                         
                          $liste->afficheTabArticle();
+                         echo '<br/>';
+                         
                          
                          
                          

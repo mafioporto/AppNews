@@ -36,23 +36,17 @@ session_start();
         
         
         $date= date('c');
-         if (isset($_REQUEST['titre'])&&isset($_REQUEST['texte']))
+         if (isset($_REQUEST['titre'])&&isset($_REQUEST['texte'])&& isset($_SESSION['pseudo']))
          
          {
              $art= new Article($_REQUEST['titre'],$_SESSION['pseudo'],$date,$_REQUEST['texte']);
              $test=$art->ajouterArticleBDD($art);
-             if($test==1)
-             {
-                 ?><script>alert ("ajouté");</script><?php
-             }
-             else
-             {
-                  ?><script>alert ("déja");</script><?php
+             
              
             
              
              
-             }
+             
            
          }
         ?>

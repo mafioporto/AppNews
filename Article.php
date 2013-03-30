@@ -39,7 +39,7 @@ class Article {
     function afficher_article()
     {
         
-       echo "TITRE: <h3>".$this->titre."</h3><br/> ".$this->texte."<br/> ".$this->Date."<br/>L'auteur est :  ".$this->Auteur;
+       echo "<p><h3>".$this->titre."</h3><br/> ".$this->texte."<br/> ".$this->Date."<br/>L'auteur est :  ".$this->Auteur.'</p>';
     }
     
     

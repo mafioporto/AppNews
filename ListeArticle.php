@@ -23,7 +23,10 @@ class ListeArticle {
             
         
         $bdd= connexionBDD("root", "mysql");
-        $req= "SELECT *FROM `Article` LIMIT 0 , 5;";
+        $req= "SELECT *
+            FROM `Article`
+            ORDER BY `id_article` DESC
+            LIMIT 0 , 5;";
         $tri=$bdd->query($req);
        
         
