@@ -11,6 +11,7 @@ require 'Article.php';
 class ListeArticle {
     
     private $listeArticle= array();
+    private $listeTitre=array();
   
     
     /**
@@ -42,7 +43,7 @@ class ListeArticle {
     }
    
     /**
-     * Affiche article du tableau d'article 
+     * Affiche un tableau d'article 
      */
     
     public function afficheTabArticle()
@@ -66,6 +67,29 @@ class ListeArticle {
         
         array_push($this->listeArticle, $A);
         
+    }
+    
+    /**
+     * retourne le nombre d'article du tableau
+     * @return int
+     */
+    public function getNbarticle()
+    {
+        return \count($this->listeArticle);
+    }
+    
+    /**
+     * retourne un tableau des titre de la liste d'article
+     * @return array
+     */
+    public function GetlesTitres()
+    {
+        
+        foreach ($this->listeArticle as $untitre)
+        {
+           array_push($this->listeTitre, $untitre->getTitre());
+        }
+        return $this->listeTitre;
     }
     
 }

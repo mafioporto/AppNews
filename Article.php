@@ -2,7 +2,7 @@
 
 /**
  * Description of Article
- *Article pouvant être affiché et ajouté à la base de donnée 
+ * Article pouvant être affiché et ajouté à la base de donnée 
  * @author tony Villanova
  */
 
@@ -20,7 +20,13 @@ class Article {
             
     
     
-  
+  /**
+   * Construit un article 
+   * @param String $title
+   * @param String $Auteur
+   * @param String $Date
+   * @param String $texte
+   */
    function __construct($title,$Auteur,$Date,$texte) 
    {
         
@@ -39,7 +45,7 @@ class Article {
     function afficher_article()
     {
         
-       echo "<p><h3>".$this->titre."</h3><br/> ".$this->texte."<br/> ".$this->Date."<br/>L'auteur est :  ".$this->Auteur.'</p>';
+       echo "<p><h3>".$this->titre."</h3><br/> ".$this->texte."<br/><br/> ".$this->Date."<br/>L'auteur est :  <strong>".$this->Auteur.'</strong></p>';
     }
     
     
@@ -69,6 +75,27 @@ class Article {
         }
               
         
+    }
+    /**
+     * permet de supprimer un article en entrant son titre
+     * @param String $titre
+     */
+    function supprimerArticle($titre)
+    {
+        $bdd= connexionBDD('root','mysql');
+        $req_supp="delete from Article where Titre='$titre' ;";
+        $bdd->query($req_supp);
+    }
+    
+    
+    
+    /**
+     * retourne le titre de l'article
+     * @return String
+     */
+    public function getTitre()
+    {
+        return $this->titre;
     }
     
 }

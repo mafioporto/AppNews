@@ -9,10 +9,12 @@ session_start();
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Suppression-Articles</title>
+        <link rel="stylesheet" style="text/css" href="style.css" />
     </head>
     <body>
-        <h1>Informations Entreprises</h1>
-        <p>Vous pouvez en tant qu'administrateur du site supprimer un ou plusieurs articles.</p>
+        <h1>Informations Entreprises<br/><hr/></h1>
+        
+       
         
         
 
@@ -31,14 +33,13 @@ session_start();
        
                if($_SESSION['droits']=1)
                {
-                                 
-                                 ?><p>Voici les articles entrer le titre pour le supprimer !</p>
+                                 echo "<p>Vous pouvez en tant qu'administrateur du site supprimer un ou plusieurs articles.</p>";
+                                 ?><p>Voici les articles choisir dans la liste déroulante afin de supprimer !</p>
                                 
                                      
                                      
                                      <?php
-                                 $liste= new ListeArticle();
-                                 $liste->afficheTabArticle();
+                                 $liste= new ListeArticle();                             
                                  $a= new Article("", "", "", "");
                                 
                                  echo  "<strong>Total article: ".$liste->getNbarticle()."</strong>";
@@ -67,7 +68,8 @@ session_start();
                                               <input type="submit" name="suppression" value="Supprimer Article"/>
                                               
                    </form>
-                                 
+                                 <script>alert("ATTENTION: une fois l'article supprimé il n'est plus possible de le \n\
+                                                récupérer !");</script>
                                  
                                  
                                  
@@ -107,8 +109,10 @@ session_start();
             
             
         </div>
-        <div><br/>
+       <div><br/><hr/>
         <a href="index.php">Accueil</a>
+        <a href="pageAffichage.php">afficher les articles</a>
+        <a href='Ajouterunarticle.php'>Ajouter un article</a>
         </div>
     </body>
 </html>

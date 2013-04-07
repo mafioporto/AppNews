@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="">
+  <file path="Inscription_util.php" hash="21b37816c4310357cf12288706042d9a" package="Default">
+    <include line="20" type="Include" package="Default">
+      <name>Utilisateur.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Inscription_util.php</error>
+    </parse_markers>
+  </file>
+  <file path="Article.php" hash="9b0728b664ba5da0bce1a521fbe696bc" package="Default">
+    <include line="9" type="Include Once" package="Default">
+      <name>bdd.php</name>
+      <docblock line="3">
+        <description>Description of Article
+Article pouvant être affiché et ajouté à la base de donnée</description>
+        <long-description></long-description>
+        <tag line="3" name="author" description="tony Villanova"/>
+      </docblock>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="11" package="Default">
+      <extends/>
+      <name>Article</name>
+      <full_name>\Article</full_name>
+      <property final="false" static="false" visibility="private" line="13" namespace="global" package="Default">
+        <name>$titre</name>
+        <default></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="14" namespace="global" package="Default">
+        <name>$Auteur</name>
+        <default></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="15" namespace="global" package="Default">
+        <name>$Date</name>
+        <default></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="16" namespace="global" package="Default">
+        <name>$texte</name>
+        <default></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="19" namespace="global" package="Default">
+        <name>$verif</name>
+        <default></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="23">
+          <description>Construit un article</description>
+          <long-description></long-description>
+          <tag line="23" name="param" description="" type="String" variable="$title">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="23" name="param" description="" type="String" variable="$Auteur">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="23" name="param" description="" type="String" variable="$Date">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="23" name="param" description="" type="String" variable="$texte">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+        <argument line="30">
+          <name>$title</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="30">
+          <name>$Auteur</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="30">
+          <name>$Date</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="30">
+          <name>$texte</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="45" package="Default">
+        <name>afficher_article</name>
+        <full_name>afficher_article</full_name>
+        <docblock line="42">
+          <description>Affiche,date_article,texte_art l'article sur la base du constructeur</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="56" package="Default">
+        <name>ajouterArticleBDD</name>
+        <full_name>ajouterArticleBDD</full_name>
+        <docblock line="52">
+          <description>fonction qui ajoute un article à la base de donnée</description>
+          <long-description></long-description>
+          <tag line="52" name="param" description="" type="\Article" variable="$A">
+            <type by_reference="false">\Article</type>
+          </tag>
+        </docblock>
+        <argument line="56">
+          <name>$A</name>
+          <default></default>
+          <type>\Article</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Article.php</error>
+      <error line="11" code="50000">No DocBlock was found for \Article</error>
+      <error line="13" code="50018">No DocBlock was found for property $titre</error>
+      <error line="14" code="50018">No DocBlock was found for property $Auteur</error>
+      <error line="15" code="50018">No DocBlock was found for property $Date</error>
+      <error line="16" code="50018">No DocBlock was found for property $texte</error>
+      <error line="19" code="50018">No DocBlock was found for property $verif</error>
+    </parse_markers>
+  </file>
+  <file path="ListeArticle.php" hash="3e53894013957ab349f747692992aa4c" package="Default">
+    <include line="8" type="Include Once" package="Default">
+      <name>bdd.php</name>
+      <docblock line="3">
+        <description>Description of ListeArticle</description>
+        <long-description></long-description>
+        <tag line="3" name="author" description="tony Villanova"/>
+      </docblock>
+    </include>
+    <include line="9" type="Require" package="Default">
+      <name>Article.php</name>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="11" package="Default">
+      <extends/>
+      <name>ListeArticle</name>
+      <full_name>\ListeArticle</full_name>
+      <property final="false" static="false" visibility="private" line="13" namespace="global" package="Default">
+        <name>$listeArticle</name>
+        <default>array()</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="20" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="16">
+          <description>constructeur connexion à la base de donnée requete
+d'affichage de la liste des articles et place dans le tableau $listeArticle</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="48" package="Default">
+        <name>afficheTabArticle</name>
+        <full_name>afficheTabArticle</full_name>
+        <docblock line="44">
+          <description>Affiche un tableau d'article</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="64" package="Default">
+        <name>ajouterUnarticle</name>
+        <full_name>ajouterUnarticle</full_name>
+        <docblock line="60">
+          <description>ajoute un article dans la tableau, passé en argument</description>
+          <long-description></long-description>
+          <tag line="60" name="param" description="de type Article" type="\Article" variable="$A">
+            <type by_reference="false">\Article</type>
+          </tag>
+        </docblock>
+        <argument line="64">
+          <name>$A</name>
+          <default></default>
+          <type>\Article</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file ListeArticle.php</error>
+      <error line="11" code="50000">No DocBlock was found for \ListeArticle</error>
+      <error line="13" code="50018">No DocBlock was found for property $listeArticle</error>
+    </parse_markers>
+  </file>
+  <file path="index.php" hash="370de45d645b10d018ca2ac95c0270e7" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file index.php</error>
+    </parse_markers>
+  </file>
+  <file path="Ajouterunarticle.php" hash="be87d6dbff56c15db7cf02b6ba61eaea" package="Default">
+    <include line="20" type="Include Once" package="Default">
+      <name>Utilisateur.php</name>
+    </include>
+    <include line="21" type="Include Once" package="Default">
+      <name>bdd.php</name>
+    </include>
+    <include line="22" type="Include Once" package="Default">
+      <name>ListeArticle.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Ajouterunarticle.php</error>
+    </parse_markers>
+  </file>
+  <file path="pageAffichage.php" hash="8424fe8c85b4674c3d81859174251830" package="Default">
+    <include line="25" type="Include Once" package="Default">
+      <name>Utilisateur.php</name>
+    </include>
+    <include line="26" type="Include Once" package="Default">
+      <name>bdd.php</name>
+    </include>
+    <include line="27" type="Include Once" package="Default">
+      <name>ListeArticle.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file pageAffichage.php</error>
+    </parse_markers>
+  </file>
+  <file path="Utilisateur.php" hash="e2216c6d22329d0da67d9e9f8608decb" package="Default">
+    <include line="10" type="Include" package="Default">
+      <name>bdd.php</name>
+      <docblock line="3">
+        <description>Description of Utilisateur
+Permet de créer un utilisateur, affiche et inscrit dans la base de donnée
+protection contre doublons</description>
+        <long-description></long-description>
+        <tag line="3" name="author" description="tony Villanova"/>
+      </docblock>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="13" package="Default">
+      <extends/>
+      <name>Utilisateur</name>
+      <full_name>\Utilisateur</full_name>
+      <property final="false" static="false" visibility="private" line="14" namespace="global" package="Default">
+        <name>$pseudo</name>
+        <default></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="15" namespace="global" package="Default">
+        <name>$mdp</name>
+        <default></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="16" namespace="global" package="Default">
+        <name>$droitUtil</name>
+        <default></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="17" namespace="global" package="Default">
+        <name>$liste_Util</name>
+        <default>array()</default>
+      </property>
+      <property final="false" static="false" visibility="private" line="18" namespace="global" package="Default">
+        <name>$liste_util_mdp</name>
+        <default>array()</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="26" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="21">
+          <description>Construit un utilisateur par défaut</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="40" package="Default">
+        <name>getdroit</name>
+        <full_name>getdroit</full_name>
+        <docblock line="35">
+          <description>retourne le droit de l'utilisateur</description>
+          <long-description></long-description>
+          <tag line="35" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="50" package="Default">
+        <name>getPseudo</name>
+        <full_name>getPseudo</full_name>
+        <docblock line="46">
+          <description>retourne le droit d'un utilisateur</description>
+          <long-description></long-description>
+          <tag line="46" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="64" package="Default">
+        <name>ajout_Util_bdd</name>
+        <full_name>ajout_Util_bdd</full_name>
+        <docblock line="59">
+          <description>Ajoute l'utilisateur à la base de donnée, vérifie si il n'est pas dans la base de donnée</description>
+          <long-description></long-description>
+          <tag line="59" name="param" description="" type="\Utilisateur" variable="$Util">
+            <type by_reference="false">\Utilisateur</type>
+          </tag>
+        </docblock>
+        <argument line="64">
+          <name>$pseudo</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="64">
+          <name>$mdp</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="64">
+          <name>$droitUtil</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="111" package="Default">
+        <name>afficher_util</name>
+        <full_name>afficher_util</full_name>
+        <docblock line="107">
+          <description>affiche un utilisateur</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="121" package="Default">
+        <name>afficher_membres</name>
+        <full_name>afficher_membres</full_name>
+        <docblock line="117">
+          <description>affiche tous les membres inscrit</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="138" package="Default">
+        <name>verif_util_mdp_bdd</name>
+        <full_name>verif_util_mdp_bdd</full_name>
+        <docblock line="130">
+          <description>permet de vérifier le mot de passe et le pseudo de l'utilisateur dans la bdd</description>
+          <long-description></long-description>
+          <tag line="130" name="param" description="" type="String" variable="$pseudo">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="130" name="param" description="" type="String" variable="$mdp">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="130" name="return" description="1 si le mot pseudo et le mot de passe sont dans la base de donnée sinon 0" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="138">
+          <name>$pseudo</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="138">
+          <name>$mdp</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Utilisateur.php</error>
+      <error line="13" code="50000">No DocBlock was found for \Utilisateur</error>
+      <error line="14" code="50018">No DocBlock was found for property $pseudo</error>
+      <error line="15" code="50018">No DocBlock was found for property $mdp</error>
+      <error line="16" code="50018">No DocBlock was found for property $droitUtil</error>
+      <error line="17" code="50018">No DocBlock was found for property $liste_Util</error>
+      <error line="18" code="50018">No DocBlock was found for property $liste_util_mdp</error>
+      <error line="59" code="50014">Name of argument $pseudo does not match with the DocBlock's name $Util in ajout_Util_bdd()</error>
+      <error line="59" code="50015">Argument $mdp is missing from the Docblock of ajout_Util_bdd()</error>
+      <error line="59" code="50015">Argument $droitUtil is missing from the Docblock of ajout_Util_bdd()</error>
+      <notice line="59" code="50013">Parameter $Util could not be found in ajout_Util_bdd()</notice>
+    </parse_markers>
+  </file>
+  <file path="bdd.php" hash="304e80e06cfd69b96e133fadf75111a7" package="Default">
+    <function namespace="global" line="6" package="Default">
+      <name>connexionBDD</name>
+      <full_name>\connexionBDD</full_name>
+      <argument line="6">
+        <name>$util</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="6">
+        <name>$mdp</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file bdd.php</error>
+      <error line="6" code="50009">No DocBlock was found for function \connexionBDD()</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

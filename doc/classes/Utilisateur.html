@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Utilisateur</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu"></ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">27</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Construit un utilisateur par défaut"><span class="description">Construit un utilisateur par défaut</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_afficher_membres" title="afficher_membres :: affiche tous les membres inscrit"><span class="description">affiche tous les membres inscrit</span><pre>afficher_membres()</pre></a></li>
+<li class="method public "><a href="#method_afficher_util" title="afficher_util :: affiche un utilisateur"><span class="description">affiche un utilisateur</span><pre>afficher_util()</pre></a></li>
+<li class="method public "><a href="#method_ajout_Util_bdd" title="ajout_Util_bdd :: Ajoute l'utilisateur à la base de donnée, vérifie si il n'est pas dans la base de donnée"><span class="description">Ajoute l'utilisateur à la base de donnée, vérifie si il n'est pas dans la base de donnée</span><pre>ajout_Util_bdd()</pre></a></li>
+<li class="method public "><a href="#method_getPseudo" title="getPseudo :: retourne le droit d'un utilisateur"><span class="description">retourne le droit d'un utilisateur</span><pre>getPseudo()</pre></a></li>
+<li class="method public "><a href="#method_getdroit" title="getdroit :: retourne le droit de l'utilisateur"><span class="description">retourne le droit de l'utilisateur</span><pre>getdroit()</pre></a></li>
+<li class="method public "><a href="#method_verif_util_mdp_bdd" title="verif_util_mdp_bdd :: permet de vérifier le mot de passe et le pseudo de l'utilisateur dans la bdd"><span class="description">permet de vérifier le mot de passe et le pseudo de l'utilisateur dans la bdd</span><pre>verif_util_mdp_bdd()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_droitUtil" title="$droitUtil :: "><span class="description"></span><pre>$droitUtil</pre></a></li>
+<li class="property private "><a href="#property_liste_Util" title="$liste_Util :: "><span class="description"></span><pre>$liste_Util</pre></a></li>
+<li class="property private "><a href="#property_liste_util_mdp" title="$liste_util_mdp :: "><span class="description"></span><pre>$liste_util_mdp</pre></a></li>
+<li class="property private "><a href="#property_mdp" title="$mdp :: "><span class="description"></span><pre>$mdp</pre></a></li>
+<li class="property private "><a href="#property_pseudo" title="$pseudo :: "><span class="description"></span><pre>$pseudo</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Utilisateur"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Utilisateur.html">Utilisateur</a>
+</li>
+</ul>
+<div class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Construit un utilisateur par défaut</h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_afficher_membres"></a><div class="element clickable method public method_afficher_membres" data-toggle="collapse" data-target=".method_afficher_membres .collapse">
+<h2>affiche tous les membres inscrit</h2>
+<pre>afficher_membres() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_afficher_util"></a><div class="element clickable method public method_afficher_util" data-toggle="collapse" data-target=".method_afficher_util .collapse">
+<h2>affiche un utilisateur</h2>
+<pre>afficher_util() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_ajout_Util_bdd"></a><div class="element clickable method public method_ajout_Util_bdd" data-toggle="collapse" data-target=".method_ajout_Util_bdd .collapse">
+<h2>Ajoute l'utilisateur à la base de donnée, vérifie si il n'est pas dans la base de donnée</h2>
+<pre>ajout_Util_bdd($pseudo, $mdp, $droitUtil) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$pseudo</h4></div>
+<div class="subelement argument"><h4>$mdp</h4></div>
+<div class="subelement argument"><h4>$droitUtil</h4></div>
+</div></div>
+</div>
+<a id="method_getPseudo"></a><div class="element clickable method public method_getPseudo" data-toggle="collapse" data-target=".method_getPseudo .collapse">
+<h2>retourne le droit d'un utilisateur</h2>
+<pre>getPseudo() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getdroit"></a><div class="element clickable method public method_getdroit" data-toggle="collapse" data-target=".method_getdroit .collapse">
+<h2>retourne le droit de l'utilisateur</h2>
+<pre>getdroit() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_verif_util_mdp_bdd"></a><div class="element clickable method public method_verif_util_mdp_bdd" data-toggle="collapse" data-target=".method_verif_util_mdp_bdd .collapse">
+<h2>permet de vérifier le mot de passe et le pseudo de l'utilisateur dans la bdd</h2>
+<pre>verif_util_mdp_bdd(String $pseudo, String $mdp) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$pseudo</h4>
+<code>String</code>
+</div>
+<div class="subelement argument">
+<h4>$mdp</h4>
+<code>String</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>1 si le mot pseudo et le mot de passe sont dans la base de donnée sinon 0</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_droitUtil"> </a><div class="element clickable property private property_droitUtil" data-toggle="collapse" data-target=".property_droitUtil .collapse">
+<h2></h2>
+<pre>$droitUtil </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_liste_Util"> </a><div class="element clickable property private property_liste_Util" data-toggle="collapse" data-target=".property_liste_Util .collapse">
+<h2></h2>
+<pre>$liste_Util </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_liste_util_mdp"> </a><div class="element clickable property private property_liste_util_mdp" data-toggle="collapse" data-target=".property_liste_util_mdp .collapse">
+<h2></h2>
+<pre>$liste_util_mdp </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_mdp"> </a><div class="element clickable property private property_mdp" data-toggle="collapse" data-target=".property_mdp .collapse">
+<h2></h2>
+<pre>$mdp </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_pseudo"> </a><div class="element clickable property private property_pseudo" data-toggle="collapse" data-target=".property_pseudo .collapse">
+<h2></h2>
+<pre>$pseudo </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-01T18:48:49+02:00.<br></footer></div>
+</div>
+</body>
+</html>

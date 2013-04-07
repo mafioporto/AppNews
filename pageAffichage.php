@@ -1,8 +1,6 @@
 <?php
-session_start();
 
-$_SESSION['pseudo']=$_REQUEST['pseudo'];
-$_SESSION['mdp']=$_REQUEST['mdp'];
+session_start();
 
 ?>
 
@@ -10,10 +8,12 @@ $_SESSION['mdp']=$_REQUEST['mdp'];
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <title>Affichage des articles</title>
+        <link rel="stylesheet" style="text/css" href="style.css" />
+      
     </head>
     <body>
-        <h1>Informations Entreprises</h1>
+        <h1>Informations Entreprises<br/><hr/></h1>
         
         
         <div><br/>
@@ -29,7 +29,9 @@ $_SESSION['mdp']=$_REQUEST['mdp'];
        {
            
            $a= new Utilisateur(); //constructeur test
+           
           $bool= $a->verif_util_mdp_bdd($_SESSION['pseudo'], $_SESSION['mdp']);
+          $_SESSION['droits']=$a->getdroit($_SESSION['pseudo']); // on réupère les droits de l'utilisateur
                    
           
                      if($bool==1)// si l'utilisateur correspond à un utilisateur de la bdd
@@ -44,7 +46,11 @@ $_SESSION['mdp']=$_REQUEST['mdp'];
                          
                          echo "<br/><a href='Ajouterunarticle.php'>Ajouter un article</a>";
                          
+                 
+                             
+                       
                          
+                          
                    }
                  else
                    {
@@ -54,13 +60,29 @@ $_SESSION['mdp']=$_REQUEST['mdp'];
                         
        
        }
+       
+       else 
+       {
+           echo "Erreur d'identification retourner à l'accueil pour vous connecter ! "; // si variables pas initialisés 
+           
+       }
+       
+ 
+       
          ?>
             
             
             
         </div>
-        <div><br/>
+        <div><br/><hr/>
         <a href="index.php">Accueil</a>
+        <?php
+        if($_SESSION['droits']==1)
+                {
+                           
+                echo '<br/><br/><a href="Suppression_article.php">Supprimer article (admin)</a>';
+                }
+        ?>
         </div>
     </body>
 </html>

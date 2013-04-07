@@ -33,17 +33,30 @@ class Utilisateur {
    }
     
    /**
-    * retourne le droit de l'utilisateur
+    * retourne le droit de l'utilisateur passé en argument
     * @return int
     */
    
-   public function getdroit()
+   public function getdroit($pseudo)
       {
        
-         return $this->droitUtil;
+       
+       $bdd= connexionBDD('root','mysql');
+       $req= "select Droit_util from utilisateur where Pseudo='$pseudo';";
+       $droit=$bdd->query($req);
+       
+             while ($donne = $droit->fetch())
+                {
+                     return $donne['Droit_util'];
+                }
+                
+                
       }
       
-      
+      /**
+       * retourne le droit d'un utilisateur
+       * @return int
+       */
       public function getPseudo()
       {
           return $this->pseudo;
@@ -54,7 +67,7 @@ class Utilisateur {
 
 
       /**
-     * Ajoute l'utilisateur à la base de donnée
+     * Ajoute l'utilisateur à la base de donnée, vérifie si il n'est pas dans la base de donnée
      * @param Utilisateur $Util
      */
     

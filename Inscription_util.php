@@ -4,9 +4,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inscription</title>
+        <link rel="stylesheet" style="text/css" href="style.css" />
     </head>
     <body>
-        <h1>Informations Entreprises<br/></h1>
+        <h1>Informations Entreprises<br/><hr/></h1>
         <h3>Inscription</h3>
         <p>Veuillez vous inscrire pour avoir accès aux news: </p>
         <form method="Post" action="Inscription_util.php">
@@ -31,7 +32,9 @@
                         $a= new Utilisateur();
                         $a->ajout_Util_bdd($_REQUEST['pseudo'], $_REQUEST['mdp'],0);
                         echo '<br/>';
-                        echo 'Voici les membres du site: ';
+                        echo 'Voici les membres du site: <br/>';
+                        $a->afficher_membres();
+                      
                       
                        echo '<br/>'.'<br/>';
                   
