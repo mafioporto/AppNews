@@ -49,15 +49,13 @@ session_start();
                              <SELECT name="nom_article" size="1">
                                  <?php 
                                  
-                                 for ($i=0; $i<$liste->getNbarticle();$i++)
-                                 {
-                                     
+                                  
                                       foreach ( $liste->GetlesTitres()as $titre)
                                          {
                                             echo  "<option value='$titre'>".$titre;
                                          }
                                     
-                                 }
+                                 
                                  
                                  
                                  ?>
